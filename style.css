@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+.hide{
+    display: none;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-size: 1.6rem;
+
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+main{
+    width: min(42.8rem, 90%);
+    text-align: center;
+    margin-top: -12rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+    border-radius: .5rem;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #34355B;
+    margin-bottom: 1.4rem;
+}
+
+p{
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 2rem;
+}
+
+#entireCookie{
+    cursor: pointer;
+}
+
+#entireCookie:hover{
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+.brokenCookie section h1{
+    margin-bottom: 1.6rem;
+}
+
+.brokenCookie img{
+    margin-bottom: 1.7rem;
+}
+
+.brokenCookie .message{
+    background-color: #E4EDF1;
+    animation: slideMessage 1.5s ease-out forwards;
+    margin-block: 1.7rem;
+    box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 50%);
+}
+
+.brokenCookie p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    color: #000000;
+    padding: 1rem;
+}
+
+.brokenCookie button{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #FF9500;
+    border: 0;
+    border-radius: .4rem;
+    padding: 1.6rem;
+
+    cursor: pointer;
+}
+
+.brokenCookie button:hover{
+    background-color: #df8a12;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    50% { transform: translateX(5px) rotate(5deg); }
+    75% { transform: translateX(-5px) rotate(-5deg); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes slideMessage {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
