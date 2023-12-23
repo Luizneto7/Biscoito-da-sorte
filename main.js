@@ -1,5 +1,10 @@
 let indexMessage = Math.round(Math.random() * 10);
-const menssages = [
+let messagePaper = document.querySelector("#messagePaper");
+const entireCookie = document.querySelector(".entireCookie");
+const brokenCookie = document.querySelector(".brokenCookie");
+const cookie = document.querySelector(".entireCookie img");
+const btnReset = document.querySelector("button");
+const messages = [
     "Comece onde você está, use o que você tem e faça o que você pode.", 
     "Se alguém está tão cansado que não possa te dar um sorriso, deixa-lhe o teu.",
     "Tudo o que um sonho precisa para ser realizado é alguém que acredite que ele possa ser realizado.",
@@ -11,14 +16,23 @@ const menssages = [
     "Descubra quem é você, e seja essa pessoa. A sua alma foi colocada nesse mundo para ser isso, então viva essa verdade e todo resto virá",
     "Acredite em milagres, mas não dependa deles."
 ];
-const entireCookie = document.querySelector(".entireCookie");
-const brokenCookie = document.querySelector(".brokenCookie");
-const cookie = document.querySelector(".entireCookie img");
-const btnReset = document.querySelector("button");
 
-cookie.addEventListener("click", openCookie)
+cookie.addEventListener("click", openCookie);
+btnReset.addEventListener("click", handleReset);
+
 
 function openCookie(){
     entireCookie.classList.add("hide")
     brokenCookie.classList.remove("hide")
+}
+
+function handleReset(){
+    entireCookie.classList.remove("hide")
+    brokenCookie.classList.add("hide")
+    
+    indexMessage = Math.round(Math.random() * 10);
+}
+
+function drawRandomMessage(){
+    messagePaper.innerText() = messages[indexMessage]
 }
