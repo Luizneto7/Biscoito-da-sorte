@@ -14,7 +14,8 @@ const messages = [
     "Coragem é saber o que não temer.",
     "Acredite em milagres, mas não dependa deles.",
     "Descubra quem é você, e seja essa pessoa. A sua alma foi colocada nesse mundo para ser isso, então viva essa verdade e todo resto virá",
-    "Acredite em milagres, mas não dependa deles."
+    "Acredite em milagres, mas não dependa deles.",
+    "O otimismo é a fé daquele que conduz à realização; nada pode ser feito sem esperança."
 ];
 
 cookie.addEventListener("click", openCookie);
@@ -24,6 +25,7 @@ btnReset.addEventListener("click", handleReset);
 function openCookie(){
     entireCookie.classList.add("hide")
     brokenCookie.classList.remove("hide")
+    drawRandomMessage()
 }
 
 function handleReset(){
@@ -34,5 +36,5 @@ function handleReset(){
 }
 
 function drawRandomMessage(){
-    messagePaper.innerText() = messages[indexMessage]
+    messagePaper.innerText = messages[indexMessage]
 }
